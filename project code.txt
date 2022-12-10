@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GOLD"S GYM WEBSITE&FITNESS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+*{padding: 0; margin:0; box-sizing: border-box; font-family: sans-serif;}
+header{
+	width: 100%;
+	height: 100vh;
+	background: black;
+	clip-path: polygon(0% 0%,100% 0%100% 100%,80% 80%,0% 100%);
+}
+nav{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: white;
+}
+.logo{
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+#blue{
+	color:#74b9ff;
+}
+
+.menu a{
+	text-decoration: none;
+	color: white;;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.menu a:first-child{
+	border-bottom: 2px solid #74b9ff;
+}
+.icon img{
+	width: 100px;
+}
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.left{
+	flex-basis: 50%;
+}
+.right{
+	flex-basis: 50%;
+	max-width: 400px;
+}
+.right h1{
+	color: #74b9ff;
+	font-size: 50px;
+}
+.right p{
+	font-size: 25px;
+	margin:10px 0px;
+}
+.btn{
+	background: transparent;
+	padding: 10px 20px;
+	color: #74b9ff;
+	border: 1px solid #74b9ff;
+	border-radius: 8px;
+}
+#about{
+	padding: 100px 0px;
+}
+.about-row{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	
+}
+.about-left-col{
+	flex-basis: 50%;
+
+}
+.about-right-col{
+	flex-basis: 50%;	
+	
+}
+.about-right-col img{
+	width: 80%;
+}
+.about-left-col{
+	max-width: 400px;
+	margin:auto;
+}
+
+
+.about-left-col h1{
+	font-size: 50px;
+}
+.about-left-col p{
+	font-size: 20px;
+	text-align: justify;
+	margin:15px 0px;
+}
+
+
+.c-btn{
+	padding: 10px;
+	margin:10px 0px;
+	color: white;
+	border: none;
+	background: #74b9ff;
+}
+
+#signup{
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: rgba(0,0,0,0.03);
+	clip-path: polygon(0% 0%,100% 0%, 100% 100%,80% 80%,0% 100%);
+}
+
+.signup-row{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.signup-left-col{
+	flex-basis: 50%;
+	text-align:center;
+}
+.signup-left-col img{
+	width: 60%;
+}
+.signup-right-col{
+	flex-basis: 50%;
+}
+
+.signup-right-col h1{
+	font-size: 90px;
+}
+.signup-right-col h2{
+	font-size: 45px;
+	letter-spacing: 60px;
+	color: rgba(0,0,0,0.3);
+	margin:10px 0px;
+}
+
+
+#services{
+	padding: 50px 0px;
+}
+.services-info{
+	text-align: center;
+}
+.services-info h1{
+	font-size: 50px;
+}
+.services-info p{
+	font-size: 25px;
+	font-weight: bold;
+}
+.services-row{
+	display: grid;
+	grid-template-columns: repeat(3,200px);
+	grid-auto-rows: minmax(150px,auto);
+	grid-gap: 3em;
+	justify-content: center;
+	padding-top: 20px;
+}
+.services-box{
+	box-shadow: 2px 3px 5px grey;
+	padding: 10px;
+	text-align: center;
+
+}
+.services-box i{
+	background: #0984e3;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	margin-top: -20px;
+}
+
+#members{
+	padding: 100px;
+	background: url(images/dumble.png);
+	background-size: 35% 35%;
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+.member-card{
+	text-align: center;
+	padding-top: 50px;
+	width: 50%;
+	margin:auto;
+	}
+
+.member-card p{
+	margin:20px 0px;
+}
+.member-card h2{
+	margin:20px 0px;
+}
+
+#work{
+	padding-top: 50px;
+	padding-bottom: 200px;
+	background: rgba(0,0,0,0.03);
+	clip-path: polygon(0% 0%,100% 0%, 100% 100%,80% 80%,0% 100%);
+}
+.work-box{
+	box-shadow: 2px 3px 5px grey;
+}
+
+.work-box img{
+	width: 100%;
+	height: 100%;
+}
+
+#contact{
+	padding: 30px 0px;
+}
+
+.contact-row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact-left-col{
+	flex-basis: 50%;
+	padding-top: 50px;
+}
+.contact-right-col{
+	flex-basis: 50%;
+	max-width: 450px;
+	margin: auto;
+}
+.contact-right-col i{
+	font-size: 20px;
+	padding: 10px;
+	background:#74b9ff;
+	color: white; 
+}
+.contact-right-col p{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+#footer{
+	background: black;
+	color:white;
+	padding: 10px;
+	display: flex;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+#footer h1{
+	font-size: 50px;
+}
+#footer p{
+	font-size: 25px;
+}
+
+
+
+.form{
+
+	width: 70%;
+	margin:auto;
+	text-align: center;
+}
+.form input[type="text"]{
+	width: 70%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+textarea{
+	width: 70%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.c_btn{
+	background: black;
+	color: white;
+	padding: 10px;
+	width: 50%;
+	border:none;
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+<header>
+	<nav>
+		<div class="logo">
+			<span id="blue">FIT</span>NESS
+		</div>
+		<div class="menu">
+				<a href="#">Home</a>
+			<a href="#">About Us</a>
+				<a href="#">Careers</a>
+			<a href="#">Contact Us</a>
+		</div>
+
+		<div class="icon">
+			<img src="C:\Users\jaswa\Downloads\benfits....gym.png">
+		</div>
+
+	</nav>
+
+
+	<div class="container">
+		<div class="left">
+			<img src="C:\Users\jaswa\Desktop\gym.jpg">
+		</div>
+		<div class="right">
+			<p>I am a</p>
+		<h2>Gym Tranier</h2
+		<p>From LPU,My Name is Sanishk Kanukuntala.And My Teammates are Jonath,Sanjay,Sam and kowshik.....Actually We want to say about the GYMNASIUM ?... A gymnasium, also known as a gym, is a covered location for athletics. The word is derived from the ancient Greek term "gymnasium".[1] They are commonly found in athletic and fitness centres, and as activity and learning spaces in educational institutions.Doing From LPU,doing gym is good for healthy life.It helps our body to fit. It release stress from our mind.It helps our body to fit.We will help you...... 
+		<button class="btn">Join us</button>
+		</div>
+	</div>
+</header>
+ 
+<section id="signup">
+	<div class="signup-row">
+		<div class="signup-left-col">
+			<img src="C:\Users\jaswa\Downloads\pose-muscle-muscle-rod-press-hd-wallpaper-preview.jpg">
+		</div>
+		<div class="signup-right-col">
+				<h1> BEING <span id="blue">BODY</span></h1>
+			<h2>BUILDER</h2>
+			<button class="c-btn">Signup </button>
+                 <a href=file:///C:/Users/jaswa/Desktop/PW_2(for%20form%20page).html>Signup</a>
+
+		</div>
+	</div>
+</section>
+<section id="services">
+	<div class="services-info">
+			<h1>Our <span id="blue">Services</span></h1>
+	<p>GROUP CLSSSES ONLY </p>
+	</div>
+	<div class="services-row">
+		<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2> 1-MONTHS</h2>
+		<p>	2000(RUPEES-only) <br>
+From LPU,Doing From LPU,doing gym is good for healthy life.It helps our body to fit. It release stress from our mind.It helps our body to fit.</p>
+		</div>
+
+		<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>3-MONTHS</h2>
+		<p>	5000(RUPEES-only)  </p>
+		</div>
+
+		<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>6-MONTHS(FOR SINGLE)</h2>
+		<p>	8000(RUPEES)</p>
+		</div>
+
+		<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>6-MONTHS(FOR COUPLE)</h2>
+		<p>	12000(RUPEES-only) </p>
+		</div>
+
+		<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>1-YEAR(FOR SINGLE)</h2>
+		<p> 14000(RUPEES-only)  </p>
+		</div>
+
+		<div class="services-box">
+				<i class="fa fa-suitcase" aria-hidden="true"></i>
+				<h2>1-YEAR(FOR COUPLE)</h2>
+		<p>	20000(RUPEES-only)  </p>
+		</div>
+
+	</div>
+</section>
+
+
+<section id="members">
+		<div class="services-info">
+			<h1>Our <span id="blue">Members</span></h1>
+	<p>What our gym member says that.....
+</div>
+
+
+<div class="member-card">
+	
+
+	<img src="C:\Users\jaswa\Downloads\images.png">
+	<p>
+ 	Once you learn to quit, it becomes a habit.<br>
+     A year from now you may wish you had started today.<br>
+     Don’t give up on your dreams, or your dreams will give up on you.<br>
+The hard days are the best because that’s when champions are made, so if you push through, you can push through anything<br>
+The pain you feel today is the strength you feel tomorrow.<br>
+
+	</p>
+	<h2>* PAVAN KUMAR ,Gym Client </h2>
+
+	<img src="C:\Users\jaswa\Downloads\download.jpg">
+</div>
+</section>
+
+<section id="work">
+		<div class="services-info">
+			<h1>Our <span id="blue">Works</span></h1>
+	<p>What we Provide</p>
+</div>
+<div class="services-row">
+	<div class="work-box">
+		<img src="C:\Users\jaswa\Downloads\download (3).jpg">
+	</div>
+	<div class="work-box">
+		<img src="C:\Users\jaswa\Downloads\download (4).jpg">
+	</div>
+	<div class="work-box">
+		<img src="C:\Users\jaswa\Downloads\download (2).jpg">
+	</div>
+	<div class="work-box">
+		<img src="C:\Users\jaswa\Downloads\download (5).jpg">
+	</div>
+	<div class="work-box">
+		<img src="C:\Users\jaswa\Downloads\download.png">
+	</div>
+	<div class="work-box">
+		<img src="C:\Users\jaswa\Downloads\download (1).jpg""C:\Users\jaswa\Downloads\download.jpg">
+	</div>
+</div>
+</section>
+
+
+<section id="about">
+	<div class="about-row">
+		<div class="about-left-col">
+			<h2> Frequently <span id="blue">Asked Questions</span></h2>
+                 <p>"No pain, no gain" is a workout myth. True or False?</p><br>
+		 True. "No pain, no gain" is a workout myth because while some muscle aches and pains are normal when beginning a new fitness routine, many types of pain are bad for you. 
+
+			</p>
+			<p>Maintaining physical fitness requires major lifestyle changes. True or False?</p><br>False. Fitness can be achieved through small changes in what you eat and your level of activity. It's really that simple. Don't try to do too much too soon, and don't quit before you have a chance to experience the rewards of improved fitness and a healthy diet!
+		
+			</p>
+<p>You should warm up before exercising. True or False?</p><br>True. Each workout should begin with a warm-up. A warm-up should include 5 to 10 minutes of exercise such as walking, slow jogging, knee lifts, arm circles, and/or trunk rotations. Warming up is important to help prevent injury. It also helps to maximize benefits from exercise
+</p>
+<p>The more you sweat during a workout, the more fat the body is burning. True or False?</p><br>False. "This is false," says Cedric Bryant, chief exercise physiologist for the American Council on Exercise. "The amount you sweat is indicative of your body's ability to maintain its normal body temperature. You sweat when your body starts to store heat so you can experience cooling via evaporation of that sweat. So it doesn't correlate to how much energy, or calories, is being expended.</p>
+<p>A desirable level of fitness can be achieved through as little as how many workouts per week?</p><br>3. Frequency, duration, intensity, and what kinds of exercises you do should be determined by what you are trying to accomplish. Your goals, your present fitness level, age, health, skills, interests, and convenience are among the factors you should consider. Still, you can reach your fitness goals in as little as three workouts per week!</p>
+
+
+			
+		
+		</div>
+	</div>
+</section>
+
+
+
+
+<section id="contact">
+		<div class="services-info">
+			<h1>Get in<span id="blue">Touch</span></h1>
+	<p> We are Available</p>
+</div>
+
+<div class="contact-row">
+	<div class="contact-left-col">
+		<div class="form">
+			<input type="text" name="" placeholder="E-mail">
+			<input type="text" name="" placeholder="Subject"><br>
+			<textarea rows="10" cols="40" placeholder="Message"></textarea>
+			<br> <button class="c_btn">Send</button>
+		</div>
+	</div>
+		<div class="contact-right-col">
+			<h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>jaswanthatchutha@gmail.com,pavankumar@gmail.com</p><br>
+ 			<h1><i class="fa fa-phone" aria-hidden="true"></i> Mobile</h1><p>9121781806,8247260452,9505516780</p>
+ 			
+ 			<h1><i class="fa fa-location-arrow" aria-hidden="true"></i> Address</h1>
+ 			 <p> GOLD"S GYM &FITNESS, BLOCK 15-A,UNIMALL,LPU
+
+ 			 </p>
+		</div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
